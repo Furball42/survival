@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Survival.Models.Character>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutSite.cshtml";
+}
+
+<div class="col-md-12">
+    <div class="row">        
+        @foreach (var item in Model)
+        {
+            <div class="col-sm-6 col-md-3 product-grid">
+                <div class="thumbnail">
+                    <div class="product-location">
+                        <span class="fa-map-marker fa"></span> @item.Area.Description
+                    </div>
+                    <div class="product-price product-price-bottom">
+                        <h4>Day&nbsp;@item.Day</h4>
+                    </div>
+                    <img src="holder.js/250x250" alt="...">
+                    <div class="caption">                        
+                        <h4>@item.CharacterName</h4>
+                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis.</p>
+                        <p><a href="#" class="btn btn-3d btn-primary" role="button">Play</a></p>
+                        @Html.ActionLink("Enter", "Details", "Wilderness", new { id = item.Id }, null)
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    </div>
+                </div>
+            </div>
+        }        
+    </div>
+</div>   

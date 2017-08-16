@@ -1,0 +1,122 @@
+﻿@model Survival.Models.Character
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Character</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Day)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Day)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HealthValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HealthValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThristValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThristValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HungerValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HungerValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExposureValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExposureValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InventorySlotCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InventorySlotCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CharacterName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CharacterName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FoodResource)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FoodResource)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WaterResource)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WaterResource)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WoodResource)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WoodResource)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HideResource)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HideResource)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

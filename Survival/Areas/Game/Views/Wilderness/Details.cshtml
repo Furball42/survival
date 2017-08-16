@@ -1,0 +1,248 @@
+﻿@model Survival.Models.Wilderness
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutGame.cshtml";
+}
+
+<div class="panel panel-character">
+    <div class="panel-body">
+        <div class="col-md-4 col-sm-12 product-grid">
+            <div class="thumbnail">
+                <div class="product-location">
+                    <span class="fa-map-marker fa"></span> @Model.Area.Description
+                </div>
+                <div class="product-price product-price-bottom">
+                    <h4>Day&nbsp;@Model.Character.Day</h4>
+                </div>
+                <img src="../Content/js/plugins/holder.js/250x250" alt="...">
+                <div class="caption">
+                    <h4>@Model.Character.CharacterName</h4>
+                    <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-12">
+            <div class="panel">
+                <div class="panel-body">
+                    <ul class="nav nav-list">
+                        <li>
+                            Health
+                            <div class="progress progress-small">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="@Model.Character.HealthValue" aria-valuemin="0" aria-valuemax="100" style="width: @(Model.Character.HealthValue)%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            Hunger
+                            <div class="progress progress-small">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="@Model.Character.HungerValue" aria-valuemin="0" aria-valuemax="100" style="width: @(Model.Character.HungerValue)%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            Thirst
+                            <div class="progress progress-small">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="@Model.Character.ThirstValue" aria-valuemin="0" aria-valuemax="100" style="width: @(Model.Character.ThirstValue)%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            Exposure
+                            <div class="progress progress-small">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="@Model.Character.ExposureValue" aria-valuemin="0" aria-valuemax="100" style="width: @(Model.Character.ExposureValue)%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-12 product-grid">
+            <div class="panel">
+                <div class="panel-body">
+                    <div class="col-md-12 col-sm-12">
+                        <h3 style="color:#DDDDDE;"><span class="fa fa-map-marker"></span> @Model.Area.Description</h3>
+                    </div>
+                    <div class="col-md-6 col-sm-6 text-left" style="padding-left:10px;">                        
+                        <h1>Cold</h1>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="wheather">
+                            <div class="stormy rainy animated pulse infinite">
+                                <div class="shadow">
+
+                                </div>
+                            </div>
+                            <div class="sub-wheather">
+                                <div class="thunder">
+
+                                </div>
+                                <div class="rain">
+                                    <div class="droplet droplet1"></div>
+                                    <div class="droplet droplet2"></div>
+                                    <div class="droplet droplet3"></div>
+                                    <div class="droplet droplet4"></div>
+                                    <div class="droplet droplet5"></div>
+                                    <div class="droplet droplet6"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12 col-sm-12">
+            <div class="panel">
+                <div class="panel-body">
+                    <ul class="nav navbar-nav nav-resource">
+                        <li><i class="fa fa-cutlery"></i>&nbsp;&nbsp;Food&nbsp;&nbsp;<strong>@Model.Character.FoodResource</strong></li>
+                        <li><i class="fa fa-glass"></i>&nbsp;&nbsp;Water&nbsp;&nbsp;<strong>@Model.Character.WaterResource</strong></li>
+                        <li><i class="fa fa-tree"></i>&nbsp;&nbsp;Wood&nbsp;&nbsp;<strong>@Model.Character.WoodResource</strong></li>
+                        <li><i class="fa fa-paw"></i>&nbsp;&nbsp;Hides&nbsp;&nbsp;<strong>@Model.Character.HideResource</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12" style="padding:20px;">
+    <div class="col-md-12 padding-0">
+        <div class="col-md-6 padding-0">
+            <div class="col-md-12 padding-0">
+                <div class="col-md-12">
+                    <div class="panel box-v1">
+                        <div class="panel-heading bg-white border-none">
+                            <div class="col-md-12 col-sm-12 col-xs-12 text-left padding-0">
+                                <h4 class="text-left"><span class="fa fa-compass"></span>&nbsp;LOCATIONS DISCOVERED</h4>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="panel panel-warning">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title"><strong>Cabin</strong></h4>
+                                </div>
+                                <div class="panel-body" style="padding-top:15px !important">
+                                    <div class="col-md-1 col-sm-1">
+                                        <span style="font-size:3em; text-align:left"><i class="fa fa-compass"></i></span>
+                                    </div>
+                                    <div class="col-md-9 col-sm-9">
+                                        Some default Some default panel content here. Nulla vitae elit libero, a pharetra augue here. 
+                                    </div>   
+                                    <div class="col-md-2 col-sm-2">
+                                        <a href="#" class="btn btn-3d btn-primary" role="button">Travel</a>
+                                    </div>
+                                                                     
+                                </div>
+                            </div>
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title"><strong>Small Stream</strong></h4>
+                                </div>
+                                <div class="panel-body" style="padding-top:15px !important">
+                                    <div class="col-md-1 col-sm-1">
+                                        <span style="font-size:3em"><i class="fa fa-compass"></i></span>
+                                    </div>
+                                    <div class="col-md-9 col-sm-9">
+                                        Some default Some default panel content here. Nulla vitae elit libero, a pharetra augue here.
+                                    </div>
+                                    <div class="col-md-2 col-sm-2">
+                                        <a href="#" class="btn btn-3d btn-primary" role="button">Travel</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="panel panel-danger">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title"><strong>Bear Den</strong></h4>
+                                </div>
+                                <div class="panel-body" style="padding-top:15px !important">
+                                    <div class="col-md-1 col-sm-1">
+                                        <span style="font-size:3em"><i class="fa fa-compass"></i></span>
+                                    </div>
+                                    <div class="col-md-9 col-sm-9">
+                                        Some default Some default panel content here. Nulla vitae elit libero, a pharetra augue here.
+                                    </div>
+                                    <div class="col-md-2 col-sm-2">
+                                        <a href="#" class="btn btn-3d btn-primary" role="button">Travel</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 padding-0">
+            <div class="col-md-12 padding-0">
+                <div class="col-md-12">
+                    <div class="panel box-v1">
+                        <div class="panel-heading bg-white border-none">
+                            <div class="col-md-12 col-sm-12 col-xs-12 text-left padding-0">
+                                <h4 class="text-left"><span class="fa fa-compass"></span>&nbsp;WILDLIFE FOUND</h4>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title"><strong>DEER</strong></h4>
+                                </div>
+                                <div class="panel-body" style="padding-top:15px !important">
+                                    <div class="col-md-1 col-sm-1">
+                                        <span style="font-size:3em"><i class="fa fa-compass"></i></span>
+                                    </div>
+                                    <div class="col-md-9 col-sm-9">
+                                        Some default Some default panel content here. Nulla vitae elit libero, a pharetra augue here.
+                                    </div>
+                                    <div class="col-md-2 col-sm-2">
+                                        <a href="#" class="btn btn-3d btn-primary" role="button">Travel</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title"><strong>FOX</strong></h4>
+                                </div>
+                                <div class="panel-body" style="padding-top:15px !important">
+                                    <div class="col-md-1 col-sm-1">
+                                        <span style="font-size:3em"><i class="fa fa-compass"></i></span>
+                                    </div>
+                                    <div class="col-md-9 col-sm-9">
+                                        Some default Some default panel content here. Nulla vitae elit libero, a pharetra augue here.
+                                    </div>
+                                    <div class="col-md-2 col-sm-2">
+                                        <a href="#" class="btn btn-3d btn-primary" role="button">Travel</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title"><strong>Lone Wolf</strong></h4>
+                                </div>
+                                <div class="panel-body" style="padding-top:15px !important">
+                                    <div class="col-md-2 col-sm-2">
+                                        <span style="font-size:3em"><i class="fa fa-compass"></i></span>
+                                    </div>
+                                    <div class="col-md-8 col-sm-8">
+                                        Some default Some default panel content here. Nulla vitae elit libero, a pharetra augue here.
+                                    </div>
+                                    <div class="col-md-2 col-sm-2">
+                                        <a href="#" class="btn btn-3d btn-primary" role="button">Travel</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
